@@ -78,9 +78,10 @@ const characters = [
     id: 'buhio',
     name: 'ぶひお',
     emoji: '🐗',
-    tag: 'いのしし的なやつ',
+    image: 'img/buhio.png',
+    tag: 'にんにく大好きな豚の男の子',
     color: '#a0724a',
-    desc: 'ぶひおはちょっと荒削りだけど、情に厚いタイプ。困っている人を見ると放っておけない。ぶひぶひ言いながら助けてくれる。'
+    desc: 'ぶひおはちょっと荒削りだけど、情に厚いタイプ。困っている人を見ると放っておけない。ぶひぶひ言いながら助けてくれる。にんにくが大すきで、いつもにんにくを持ち歩いている。'
   },
   {
     id: 'shirotan',
@@ -125,7 +126,12 @@ function buildCards() {
 
 // ===== モーダル =====
 function openModal(c) {
-  document.getElementById('modal-emoji').textContent = c.emoji;
+  const emojiEl = document.getElementById('modal-emoji');
+  if (c.image) {
+    emojiEl.innerHTML = `<img src="${c.image}" alt="${c.name}" class="modal-char-img">`;
+  } else {
+    emojiEl.textContent = c.emoji;
+  }
   document.getElementById('modal-name').textContent  = c.name;
   document.getElementById('modal-tag').textContent   = c.tag;
   document.getElementById('modal-desc').textContent  = c.desc;

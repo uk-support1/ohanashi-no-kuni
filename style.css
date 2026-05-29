@@ -275,6 +275,7 @@ body {
 .modal-close:hover { background: #e8c890; }
 
 .modal-emoji { font-size: 4rem; margin-bottom: 8px; }
+.modal-char-img { width: 200px; height: 200px; object-fit: contain; display: block; margin: 0 auto; }
 .modal-name  { font-size: 1.4rem; color: var(--brown); margin-bottom: 4px; }
 .modal-tag   { font-size: 0.78rem; color: var(--brown-light); margin-bottom: 14px; }
 .modal-desc  { font-size: 0.9rem; line-height: 1.8; color: var(--brown); }
