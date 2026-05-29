@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fdf6e3">
+  <meta name="description" content="親子で育てる、眠れない夜のお話の国">
+  <title>お話の国</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="nav">
+    <button class="nav-btn active" data-page="top">🏠 トップ</button>
+    <button class="nav-btn" data-page="zukan">📖 図鑑</button>
+  </nav>
+
+  <!-- トップ画面 -->
+  <div id="page-top" class="page active">
+    <header class="hero">
+      <div class="clouds">
+        <span class="cloud c1">☁️</span>
+        <span class="cloud c2">☁️</span>
+        <span class="cloud c3">☁️</span>
+      </div>
+      <h1 class="title">お話の国</h1>
+      <p class="subtitle">✨ ねる前のひみつのばしょ ✨</p>
+    </header>
+
+    <main class="top-main">
+      <section class="welcome-card">
+        <p class="welcome-text">
+          ここは、なっちゃんとパパとママが<br>
+          毎晩いっしょに作っているお話の世界。<br>
+          ふしぎな仲間たちが待っているよ🌙
+        </p>
+      </section>
+
+      <section class="menu-grid">
+        <button class="menu-card" data-page="zukan">
+          <span class="menu-icon">📖</span>
+          <span class="menu-label">なかまたちの図鑑</span>
+        </button>
+        <div class="menu-card coming-soon">
+          <span class="menu-icon">🗺️</span>
+          <span class="menu-label">お話の地図<br><small>じゅんびちゅう</small></span>
+        </div>
+        <div class="menu-card coming-soon">
+          <span class="menu-icon">📝</span>
+          <span class="menu-label">お話ノート<br><small>じゅんびちゅう</small></span>
+        </div>
+        <div class="menu-card coming-soon">
+          <span class="menu-icon">🌟</span>
+          <span class="menu-label">きょうのエピソード<br><small>じゅんびちゅう</small></span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>🌙 おやすみなさい 🌙</p>
+    </footer>
+  </div>
+
+  <!-- キャラクター図鑑画面 -->
+  <div id="page-zukan" class="page">
+    <header class="page-header">
+      <h2>なかまたちの図鑑</h2>
+      <p>お話の国に住むみんなを紹介するよ</p>
+    </header>
+
+    <main class="zukan-main">
+      <div class="card-grid" id="card-grid"></div>
+    </main>
+  </div>
+
+  <!-- キャラクター詳細モーダル -->
+  <div id="modal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-emoji" id="modal-emoji"></div>
+      <h3 class="modal-name" id="modal-name"></h3>
+      <p class="modal-tag" id="modal-tag"></p>
+      <p class="modal-desc" id="modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
